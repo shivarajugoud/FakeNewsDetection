@@ -9,11 +9,11 @@ from sklearn.naive_bayes import MultinomialNB
 import pickle
 
 dataset = pd.read_csv('news.csv')
+//adding labels
 x = dataset['text']
 y = dataset['label']
-
+//data preprocessing
 dataset.head()
-
 dataset.isnull().any()
 
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.3)
